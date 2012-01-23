@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Test: dir=auto, start with EN, then L</title>
+    <link rel="reference" href="dir_auto-EN-L-ref.html">
+    <link rel="author" title="Matitiahu Allouche" href="mailto:matitiahu.allouche@google.com">
+    <link rel="author" title="Oren Roth" href="mailto:oren.roth@gmail.com">
+    <link rel="author" title="HTML5 bidi test WG" href="mailto:html5bidi@googlegroups.com">
+    <link rel="help" href="http://dev.w3.org/html5/spec/Overview.html#the-dir-attribute">
+    <meta name="assert" content="
+      When dir='auto', the direction is set according to the first strong character
+      of the text.
+      In this test, it is the Latin letter A since digits are not strongly
+      directional, thus the direction must be resolved as LTR.">
+    <style>
+      body{
+        font-size:2em;
+      }
+      .box {
+        border: medium solid gray;
+        width: 400px;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    The two boxes below should look exactly the same.
+    <!-- Key to entities used below:
+      &#x05D0; - The Hebrew letter Alef (strongly RTL).
+      &#x05D1; - The Hebrew letter Bet (strongly RTL).
+      &#x05D2; - The Hebrew letter Gimel (strongly RTL). -->
+    <div class="box">
+      <p dir="auto">123ABC&#x05d0;&#x05d1;&#x05d2;.</p>
+    </div>
+    <div class="box">
+      <p dir="ltr">123ABC&#x05d0;&#x05d1;&#x05d2;.</p>
+    </div>
+  </body>
+</html>
