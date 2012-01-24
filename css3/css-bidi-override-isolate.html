@@ -10,6 +10,14 @@
     <link rel="help" href="http://dev.w3.org/csswg/css3-writing-modes/#unicode-bidi" />
     <meta name="assert" content="It is valid to combine the isolate and bidi-override values for unicode-bidi in either order." />
     <style>
+      .isolate {
+        direction: rtl;
+        unicode-bidi: isolate;
+      }
+      .override {
+        direction: rtl;
+        unicode-bidi: bidi-override;
+      }
       .override-isolate {
         direction: rtl;
         unicode-bidi: bidi-override isolate;
