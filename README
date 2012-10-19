@@ -1,4 +1,8 @@
+This repository is out of date. It is kept for historical interest.
+
+The current HTML5 bidi tests are kept at the W3C repository:
+http://dvcs.w3.org/hg/html/file/tip/tests/submission/html5bidi
+
 This is a repository of tests for bidirectional text support features in HTML5 and CSS3.
 
 See the file COPYING for the license terms.
-
